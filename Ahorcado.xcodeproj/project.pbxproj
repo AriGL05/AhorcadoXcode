@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		688281692BB1D8DF007DC69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688281682BB1D8DF007DC69D /* AppDelegate.swift */; };
 		6882816B2BB1D8DF007DC69D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6882816A2BB1D8DF007DC69D /* SceneDelegate.swift */; };
-		6882816D2BB1D8DF007DC69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6882816C2BB1D8DF007DC69D /* ViewController.swift */; };
 		688281702BB1D8DF007DC69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6882816E2BB1D8DF007DC69D /* Main.storyboard */; };
 		688281722BB1D8EB007DC69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688281712BB1D8EB007DC69D /* Assets.xcassets */; };
 		688281752BB1D8EB007DC69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688281732BB1D8EB007DC69D /* LaunchScreen.storyboard */; };
+		6882817F2BB1E432007DC69D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6882817E2BB1E432007DC69D /* logo.png */; };
+		688281822BB1E8F3007DC69D /* hangmanlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 688281812BB1E8F3007DC69D /* hangmanlogo.png */; };
+		688281862BB1EE3C007DC69D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688281852BB1EE3C007DC69D /* MenuViewController.swift */; };
+		688281892BB1EEC6007DC69D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688281882BB1EEC6007DC69D /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		688281652BB1D8DF007DC69D /* Ahorcado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ahorcado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688281682BB1D8DF007DC69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6882816A2BB1D8DF007DC69D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6882816C2BB1D8DF007DC69D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6882816F2BB1D8DF007DC69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		688281712BB1D8EB007DC69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		688281742BB1D8EB007DC69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688281762BB1D8EB007DC69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6882817E2BB1E432007DC69D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../../Downloads/MenyStoryboard/logo.png; sourceTree = "<group>"; };
+		688281812BB1E8F3007DC69D /* hangmanlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hangmanlogo.png; path = ../../../../../Downloads/MenyStoryboard/hangmanlogo.png; sourceTree = "<group>"; };
+		688281852BB1EE3C007DC69D /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		688281882BB1EEC6007DC69D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,24 @@
 			children = (
 				688281682BB1D8DF007DC69D /* AppDelegate.swift */,
 				6882816A2BB1D8DF007DC69D /* SceneDelegate.swift */,
-				6882816C2BB1D8DF007DC69D /* ViewController.swift */,
+				688281852BB1EE3C007DC69D /* MenuViewController.swift */,
+				688281882BB1EEC6007DC69D /* SplashViewController.swift */,
 				6882816E2BB1D8DF007DC69D /* Main.storyboard */,
 				688281712BB1D8EB007DC69D /* Assets.xcassets */,
+				6882817D2BB1E419007DC69D /* images */,
 				688281732BB1D8EB007DC69D /* LaunchScreen.storyboard */,
 				688281762BB1D8EB007DC69D /* Info.plist */,
 			);
 			path = Ahorcado;
+			sourceTree = "<group>";
+		};
+		6882817D2BB1E419007DC69D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				688281812BB1E8F3007DC69D /* hangmanlogo.png */,
+				6882817E2BB1E432007DC69D /* logo.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +141,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6882817F2BB1E432007DC69D /* logo.png in Resources */,
 				688281752BB1D8EB007DC69D /* LaunchScreen.storyboard in Resources */,
+				688281822BB1E8F3007DC69D /* hangmanlogo.png in Resources */,
 				688281722BB1D8EB007DC69D /* Assets.xcassets in Resources */,
 				688281702BB1D8DF007DC69D /* Main.storyboard in Resources */,
 			);
@@ -137,9 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6882816D2BB1D8DF007DC69D /* ViewController.swift in Sources */,
 				688281692BB1D8DF007DC69D /* AppDelegate.swift in Sources */,
 				6882816B2BB1D8DF007DC69D /* SceneDelegate.swift in Sources */,
+				688281862BB1EE3C007DC69D /* MenuViewController.swift in Sources */,
+				688281892BB1EEC6007DC69D /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
