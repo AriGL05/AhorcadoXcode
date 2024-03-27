@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682D3E5D2BB483E600A29358 /* omoriback.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 682D3E5C2BB483E600A29358 /* omoriback.jpeg */; };
+		682D3E602BB48FD900A29358 /* backgroundgame.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 682D3E5F2BB48FD900A29358 /* backgroundgame.jpeg */; };
+		682D3E632BB490DB00A29358 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682D3E622BB490DB00A29358 /* CreditsViewController.swift */; };
+		682D3E662BB490EA00A29358 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682D3E652BB490EA00A29358 /* GameViewController.swift */; };
+		682D3E6D2BB4B76700A29358 /* jonathansprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 682D3E6C2BB4B76700A29358 /* jonathansprite.png */; };
+		682D3E702BB4B76D00A29358 /* jafetsprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 682D3E6F2BB4B76D00A29358 /* jafetsprite.png */; };
+		682D3E722BB4B77600A29358 /* arisprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 682D3E712BB4B77600A29358 /* arisprite.png */; };
 		688281692BB1D8DF007DC69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688281682BB1D8DF007DC69D /* AppDelegate.swift */; };
 		6882816B2BB1D8DF007DC69D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6882816A2BB1D8DF007DC69D /* SceneDelegate.swift */; };
 		688281702BB1D8DF007DC69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6882816E2BB1D8DF007DC69D /* Main.storyboard */; };
@@ -19,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		682D3E5C2BB483E600A29358 /* omoriback.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = omoriback.jpeg; path = ../../../../../Documents/omoriback.jpeg; sourceTree = "<group>"; };
+		682D3E5F2BB48FD900A29358 /* backgroundgame.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = backgroundgame.jpeg; path = ../../../../../Documents/backgroundgame.jpeg; sourceTree = "<group>"; };
+		682D3E622BB490DB00A29358 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		682D3E652BB490EA00A29358 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		682D3E6C2BB4B76700A29358 /* jonathansprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jonathansprite.png; path = ../../../../../Downloads/MenyStoryboard/jonathansprite.png; sourceTree = "<group>"; };
+		682D3E6F2BB4B76D00A29358 /* jafetsprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jafetsprite.png; path = ../../../../../Downloads/MenyStoryboard/jafetsprite.png; sourceTree = "<group>"; };
+		682D3E712BB4B77600A29358 /* arisprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arisprite.png; path = ../../../../../Downloads/MenyStoryboard/arisprite.png; sourceTree = "<group>"; };
 		688281652BB1D8DF007DC69D /* Ahorcado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ahorcado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		688281682BB1D8DF007DC69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6882816A2BB1D8DF007DC69D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +80,8 @@
 				6882816A2BB1D8DF007DC69D /* SceneDelegate.swift */,
 				688281852BB1EE3C007DC69D /* MenuViewController.swift */,
 				688281882BB1EEC6007DC69D /* SplashViewController.swift */,
+				682D3E652BB490EA00A29358 /* GameViewController.swift */,
+				682D3E622BB490DB00A29358 /* CreditsViewController.swift */,
 				6882816E2BB1D8DF007DC69D /* Main.storyboard */,
 				688281712BB1D8EB007DC69D /* Assets.xcassets */,
 				6882817D2BB1E419007DC69D /* images */,
@@ -78,6 +94,11 @@
 		6882817D2BB1E419007DC69D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				682D3E712BB4B77600A29358 /* arisprite.png */,
+				682D3E6F2BB4B76D00A29358 /* jafetsprite.png */,
+				682D3E6C2BB4B76700A29358 /* jonathansprite.png */,
+				682D3E5F2BB48FD900A29358 /* backgroundgame.jpeg */,
+				682D3E5C2BB483E600A29358 /* omoriback.jpeg */,
 				688281812BB1E8F3007DC69D /* hangmanlogo.png */,
 				6882817E2BB1E432007DC69D /* logo.png */,
 			);
@@ -141,11 +162,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682D3E702BB4B76D00A29358 /* jafetsprite.png in Resources */,
 				6882817F2BB1E432007DC69D /* logo.png in Resources */,
 				688281752BB1D8EB007DC69D /* LaunchScreen.storyboard in Resources */,
 				688281822BB1E8F3007DC69D /* hangmanlogo.png in Resources */,
 				688281722BB1D8EB007DC69D /* Assets.xcassets in Resources */,
+				682D3E722BB4B77600A29358 /* arisprite.png in Resources */,
 				688281702BB1D8DF007DC69D /* Main.storyboard in Resources */,
+				682D3E5D2BB483E600A29358 /* omoriback.jpeg in Resources */,
+				682D3E602BB48FD900A29358 /* backgroundgame.jpeg in Resources */,
+				682D3E6D2BB4B76700A29358 /* jonathansprite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +186,8 @@
 				6882816B2BB1D8DF007DC69D /* SceneDelegate.swift in Sources */,
 				688281862BB1EE3C007DC69D /* MenuViewController.swift in Sources */,
 				688281892BB1EEC6007DC69D /* SplashViewController.swift in Sources */,
+				682D3E662BB490EA00A29358 /* GameViewController.swift in Sources */,
+				682D3E632BB490DB00A29358 /* CreditsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

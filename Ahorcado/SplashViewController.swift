@@ -9,11 +9,10 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+
     @IBOutlet weak var imgSplash: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
 
     }
     override func viewDidAppear(_ animated: Bool) {
