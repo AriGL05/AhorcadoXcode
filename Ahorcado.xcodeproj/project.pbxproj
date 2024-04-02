@@ -23,6 +23,7 @@
 		68F7E1B72BBC7C9000BC8FF8 /* jafetsprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F7E1B62BBC7C9000BC8FF8 /* jafetsprite.png */; };
 		68F7E1BB2BBC7CA100BC8FF8 /* arisprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F7E1BA2BBC7CA100BC8FF8 /* arisprite.png */; };
 		68F7E1BF2BBC7CB600BC8FF8 /* jonathansprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F7E1BE2BBC7CB600BC8FF8 /* jonathansprite.png */; };
+		68F7E1C42BBCA08900BC8FF8 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7E1C32BBCA08900BC8FF8 /* RecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		68F7E1B62BBC7C9000BC8FF8 /* jafetsprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jafetsprite.png; sourceTree = "<group>"; };
 		68F7E1BA2BBC7CA100BC8FF8 /* arisprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arisprite.png; sourceTree = "<group>"; };
 		68F7E1BE2BBC7CB600BC8FF8 /* jonathansprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jonathansprite.png; sourceTree = "<group>"; };
+		68F7E1C32BBCA08900BC8FF8 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				6882816A2BB1D8DF007DC69D /* SceneDelegate.swift */,
 				688281852BB1EE3C007DC69D /* MenuViewController.swift */,
 				688281882BB1EEC6007DC69D /* SplashViewController.swift */,
+				68F7E1C32BBCA08900BC8FF8 /* RecordViewController.swift */,
 				682D3E652BB490EA00A29358 /* GameViewController.swift */,
 				682D3E622BB490DB00A29358 /* CreditsViewController.swift */,
 				6882816E2BB1D8DF007DC69D /* Main.storyboard */,
@@ -193,6 +196,7 @@
 				688281692BB1D8DF007DC69D /* AppDelegate.swift in Sources */,
 				6882816B2BB1D8DF007DC69D /* SceneDelegate.swift in Sources */,
 				688281862BB1EE3C007DC69D /* MenuViewController.swift in Sources */,
+				68F7E1C42BBCA08900BC8FF8 /* RecordViewController.swift in Sources */,
 				688281892BB1EEC6007DC69D /* SplashViewController.swift in Sources */,
 				682D3E662BB490EA00A29358 /* GameViewController.swift in Sources */,
 				682D3E632BB490DB00A29358 /* CreditsViewController.swift in Sources */,
