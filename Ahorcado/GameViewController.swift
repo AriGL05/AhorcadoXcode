@@ -7,6 +7,15 @@
 
 import UIKit
 import CoreData
+import Foundation
+
+extension String {
+    func quitarAcentos() -> String? {
+        let mutableString = NSMutableString(string: self) as CFMutableString
+        CFStringTransform(mutableString, nil, kCFStringTransformStripCombiningMarks, false)
+        return mutableString as String
+    }
+}
 
 class GameViewController: UIViewController {
 
@@ -117,7 +126,7 @@ class GameViewController: UIViewController {
         {
             let palabraActual = palabraAleatoria
             let palabraOculta = String(repeating: "_ ", count: palabraActual.count)
-            self.palabraSeleccionada = palabraActual
+            self.palabraSeleccionada = palabraActual.quitarAcentos()!.lowercased()
             return palabraOculta
         }
         return ""
@@ -132,7 +141,7 @@ class GameViewController: UIViewController {
         guard let letraBoton = sender.titleLabel?.text?.lowercased().first else { return }
 
         
-        for letra in palabraSeleccionada.lowercased() {
+        for letra in palabraSeleccionada {
               if letra.lowercased() == String(letraBoton) {
                   print("La palabra contiene la letra '\(letra)'")
                   palabraOculta.append(letra)
