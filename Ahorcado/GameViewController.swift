@@ -24,12 +24,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var crz3: UIImageView!
     
     let imagenes = ["hangman1","hangman2","hangman3","hangman4","hangman5","hangman6","hangman7","hangman8","hangman9","hangman10",]
-    let valorBaseRonda = 300
+    let valorBaseRonda = 500
     let penalizacionError = 10
     var errores = 0
     let valorPalabraAdivinada = 50
     var palabra_adivinada = 0
     var puntaje:Int = 0
+    var count: Int = 0
 //    let tiempoLimite = 120
     
     var oportunidad = 0
@@ -95,8 +96,7 @@ class GameViewController: UIViewController {
 
         
     var timer:Timer = Timer()
-        var count:Int = 0
-        var timerCounting:Bool = false
+    var timerCounting:Bool = false
 
     
     
@@ -195,6 +195,8 @@ class GameViewController: UIViewController {
                 else{
 //                    partido terminado
                     print("terminado ")
+                    timer.invalidate()
+
                     crz1.tintColor = .darkGray
 //                    mandar una alerta de que perdio, para que ingrese su nombre
                     var nombre = ""
@@ -233,7 +235,8 @@ class GameViewController: UIViewController {
     func puntuacion()-> Int
     {//aqui vamos a poner la puntuacion para guardarla
         
-        let puntuacion_final = valorBaseRonda - (errores * penalizacionError) + (valorPalabraAdivinada * palabra_adivinada)
+        let puntuacion_final = valorBaseRonda - (errores * penalizacionError) + (valorPalabraAdivinada * palabra_adivinada) - count
+        print("tiempooo\(count)")
         return puntuacion_final
     }
     
