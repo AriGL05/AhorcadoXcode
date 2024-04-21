@@ -6,24 +6,67 @@
 //
 
 import UIKit
+import CoreData
 
 class RecordViewController: UIViewController {
 
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "Model") // Nombre del archivo .xcdatamodeld
+        container.loadPersistentStores(completionHandler: { (_, error) in
+            if let error = error {
+                fatalError("Error al cargar el contenedor persistente: \(error)")
+            }
+        })
+        return container
+    }()
+    
+    @IBOutlet weak var lblPrimero: UILabel!
+    @IBOutlet weak var lblSegundo: UILabel!
+    @IBOutlet weak var lblTercero: UILabel!
+    @IBOutlet weak var lblCuarto: UILabel!
+    
+    var puntuaciones = [String?]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        obtenerTopJugadores()
+//        lblPrimero.text = puntuaciones[0] ?? "..."
+//        lblSegundo.text = puntuaciones[1] ?? "..."
+//        lblTercero.text = puntuaciones[2] ?? "..."
+//        lblCuarto.text = puntuaciones[3] ?? "..."
     }
     
 
-    /*
-    // MARK: - Navigation
+    func obtenerTopJugadores() {
+         let context = persistentContainer.viewContext
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+         let fetchRequest: NSFetchRequest<Jugador> = Jugador.fetchRequest()
+         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "score", ascending: false)]
+         fetchRequest.fetchLimit = 4 // Obtener solo los tres jugadores más altos
+
+         do {
+             let topJugadores = try context.fetch(fetchRequest)
+             for jugador in topJugadores {
+                 print("Nombre: \(jugador.name ?? "Sin nombre") - Puntuación: \(jugador.score)")
+                 puntuaciones.append("Nombre: \(jugador.name ?? "Sin nombre") - Puntuación: \(jugador.score)")
+             }
+             actualizarEtiquetas()
+         } catch {
+             print("Error al obtener los jugadores: \(error)")
+         }
+     }
+    func actualizarEtiquetas() {
+           if puntuaciones.isEmpty {
+               lblPrimero.text = "..."
+               lblSegundo.text = "..."
+               lblTercero.text = "..."
+               lblCuarto.text = "..."
+           } else {
+               lblPrimero.text = puntuaciones.indices.contains(0) ? puntuaciones[0] : "..."
+               lblSegundo.text = puntuaciones.indices.contains(1) ? puntuaciones[1] : "..."
+               lblTercero.text = puntuaciones.indices.contains(2) ? puntuaciones[2] : "..."
+               lblCuarto.text = puntuaciones.indices.contains(3) ? puntuaciones[3] : "..."
+           }
+       }
 
 }
