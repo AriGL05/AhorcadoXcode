@@ -8,6 +8,8 @@
 import UIKit
 import CoreData
 import Foundation
+import AVFoundation
+import AVFAudio
 
 extension String {
     func quitarAcentos() -> String? {
@@ -107,18 +109,28 @@ class GameViewController: UIViewController {
     var timer:Timer = Timer()
     var timerCounting:Bool = false
 
+    private var audioPlayer: AVAudioPlayer?
+    private var notPlayer: AVAudioPlayer?
+    let cancion = "06. Let's Get Together Now!"
+    let sonidoWin = "something-sound-effect-omori"
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lblPalabra.text = iniciarPalabra()
+        tocarCancion()
         print("palabra es: \(palabraSeleccionada)")
         timerCounting = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+       
 
     }
     
-    
+    override func viewDidDisappear(_ animated: Bool) {
+           super.viewDidDisappear(animated)
+           audioPlayer?.stop()
+       }
     
     
     func iniciarPalabra()-> String {
@@ -131,7 +143,29 @@ class GameViewController: UIViewController {
         }
         return ""
     }
-    
+    func tocarCancion()
+    {
+        let audioURL = Bundle.main.url(forResource: cancion, withExtension: "mp3")!
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
+        
+            audioPlayer?.numberOfLoops = -1 // Repetir infinitamente
+            audioPlayer?.play()
+        } catch {
+            print("Error al reproducir música: \(error)")
+        }
+    }
+    func terminarSonido()
+    {
+        let audioURL = Bundle.main.url(forResource: sonidoWin, withExtension: "mp3")!
+        do {
+            notPlayer = try AVAudioPlayer(contentsOf: audioURL)
+            notPlayer?.play()
+        } catch {
+            print("Error al reproducir música: \(error)")
+        }
+        
+    }
     
     @IBAction func BotonPresionado(_ sender: UIButton) {
         var palabraOculta = ""
@@ -193,6 +227,7 @@ class GameViewController: UIViewController {
                 oportunidad = 0
                 print("perdio una vida")
 //                aqui le quita una vida
+                terminarSonido()
                 if vidas != 1
                 {
                     vidas -= 1
