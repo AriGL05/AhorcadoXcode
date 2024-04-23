@@ -57,15 +57,15 @@ class RecordViewController: UIViewController {
      }
     func actualizarEtiquetas() {
            if puntuaciones.isEmpty {
-               lblPrimero.text = "..."
-               lblSegundo.text = "..."
-               lblTercero.text = "..."
-               lblCuarto.text = "..."
+               lblPrimero.text = "Nombre: Olimar Puntuación: -10"
+               lblSegundo.text = "Nombre: Uriel Puntuación: -200"
+               lblTercero.text = "Nombre: Jafet Puntuación: -240"
+               lblCuarto.text = "Nombre: Maracas Puntuación: -400"
            } else {
-               lblPrimero.text = puntuaciones.indices.contains(0) ? puntuaciones[0] : "..."
-               lblSegundo.text = puntuaciones.indices.contains(1) ? puntuaciones[1] : "..."
-               lblTercero.text = puntuaciones.indices.contains(2) ? puntuaciones[2] : "..."
-               lblCuarto.text = puntuaciones.indices.contains(3) ? puntuaciones[3] : "..."
+               lblPrimero.text = puntuaciones.indices.contains(0) ? puntuaciones[0] : "Nombre: Olimar Puntuación: -10"
+               lblSegundo.text = puntuaciones.indices.contains(1) ? puntuaciones[1] : "Nombre: Uriel Puntuación: -200"
+               lblTercero.text = puntuaciones.indices.contains(2) ? puntuaciones[2] : "Nombre: Jafet Puntuación: -240"
+               lblCuarto.text = puntuaciones.indices.contains(3) ? puntuaciones[3] : "Nombre: Maracas Puntuación: -400"
            }
        }
 
